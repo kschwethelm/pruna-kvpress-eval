@@ -1,0 +1,12 @@
+[project]
+name = "pruna-kvpress-eval"
+version = "0.1.0"
+description = "Evaluation scripts and benchmarks for the KVPress integration in Pruna"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pruna[kvpress]>=0.3.2",
+]
+
+[tool.uv.sources]
+pruna = { git = "https://github.com/kschwethelm/pruna.git", branch = "feat/kvpress" }

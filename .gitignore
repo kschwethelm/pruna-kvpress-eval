@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+logs/
+*.out
+*.err
+results/
+shells/_machine_config*.sh
