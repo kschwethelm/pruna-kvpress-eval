@@ -8,4 +8,9 @@ logs/
 *.out
 *.err
 results/
+figures/
+docs/
+report/
+dev/
 shells/_machine_config*.sh
+.claude/

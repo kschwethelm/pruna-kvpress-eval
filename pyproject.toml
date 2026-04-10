@@ -5,8 +5,24 @@ description = "Evaluation scripts and benchmarks for the KVPress integration in 
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "datasets>=4.8.4",
+    "flash-attn",
+    "flash-attn-3>=3.0.0",
+    "ipython>=8.0.0",
+    "lm-eval[longbench,ruler]>=0.4.11",
+    "matplotlib>=3.10.8",
+    "mistral-common>=1.11.0",
     "pruna[kvpress]>=0.3.2",
+    "torch==2.9.1",
 ]
 
 [tool.uv.sources]
 pruna = { git = "https://github.com/kschwethelm/pruna.git", branch = "feat/kvpress" }
+flash-attn = { url = "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl" }
+flash-attn-3 = { url = "https://github.com/windreamer/flash-attention3-wheels/releases/download/2026.02.17-06dc5e7/flash_attn_3-3.0.0%2B20260216.cu128torch291cxx11abitrue.fec3a6-cp39-abi3-linux_x86_64.whl" }
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
